@@ -1,0 +1,26 @@
+package com.springboot.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.springboot.model.Employee;
+import com.springboot.repo.EmployeeRepo;
+
+import jakarta.servlet.http.HttpServletResponse;
+
+@Service
+public class EmployeeReportService {
+	
+	@Autowired
+	private EmployeeRepo employeeRepo;
+	
+
+	public void generateExcelSheet(HttpServletResponse response) {
+		List<Employee> list = employeeRepo.findAll();
+		
+	}
+
+}
