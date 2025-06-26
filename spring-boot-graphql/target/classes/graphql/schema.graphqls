@@ -1,0 +1,14 @@
+type Product{
+    id: ID
+    productName:String
+    productUrl:String
+    productDesc:String
+    category:String
+    productPrice:Float
+    stock:Int
+}
+
+type Query{
+    getAllProducts: [Product]
+    getProductByCategory(category:String): [Product]
+}
